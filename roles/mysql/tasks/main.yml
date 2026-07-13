@@ -1,0 +1,22 @@
+- name: Install MySQL
+  apt:
+    name: mysql-server
+    state: present
+
+- name: Ensure MySQL is running
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+
+- name: Create database
+  mysql_db:
+    name: "{{ mysql_db }}"
+    state: present
+
+- name: Create database user
+  mysql_user:
+    name: "{{ mysql_user }}"
+    password: "{{ mysql_password }}"
+    priv: "{{ mysql_db }}.*:ALL"
+    state: present
