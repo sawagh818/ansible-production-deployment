@@ -1,0 +1,8 @@
+[web]
+prod-web1 ansible_host=192.168.56.10
+
+[app]
+prod-app1 ansible_host=192.168.56.11
+
+[db]
+prod-db1 ansible_host=192.168.56.12
