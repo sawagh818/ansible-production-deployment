@@ -1,0 +1,9 @@
+- name: Apply common configuration
+  hosts: all
+  become: yes
+  roles:
+    - common
+
+- import_playbook: db.yml
+- import_playbook: app.yml
+- import_playbook: web.yml
