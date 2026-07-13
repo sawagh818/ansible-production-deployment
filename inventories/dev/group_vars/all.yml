@@ -1,0 +1,5 @@
+app_name: demo_flask_app
+app_port: 5000
+mysql_db: demo_db
+mysql_user: demo_user
+mysql_password: demo_pass
