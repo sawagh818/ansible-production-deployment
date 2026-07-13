@@ -1,1 +1,5 @@
-
+- name: Configure Application Server
+  hosts: app
+  become: yes
+  roles:
+    - app
